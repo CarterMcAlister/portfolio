@@ -1,8 +1,7 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "portfolio",
+  "version": "0.0.10",
+  "author": "Carter McAlister",
   "dependencies": {
     "bulma": "^0.7.0",
     "gatsby": "^1.9.213",
@@ -24,10 +23,6 @@
     "react-helmet": "^5.2.0",
     "uuid": "^3.2.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "main": "n/a",
   "scripts": {
     "start": "npm run develop",

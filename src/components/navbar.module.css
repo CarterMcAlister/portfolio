@@ -1,0 +1,69 @@
+.navbar {
+    background-color: #1e242c;
+    transition: opacity .5s ease;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1020;
+    border-radius: 0 0 2em 2em;
+    font-size: 18px;
+    padding: .5rem 1rem;
+    
+}
+
+.navbarContainer {
+    composes: container from "./global.module.css"; /*Inherits global container*/
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbarBrand {
+    color: #fff;
+    font-weight: 400;
+    font-family: "Share Tech Mono",monospace;
+    word-spacing: -.175em;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    font-size: .9em;
+}
+
+.navbarBrand:hover {
+    color: #fff;
+    opacity: .3;
+}
+
+.brandTagline {
+    opacity: .5;
+}
+.tagLineSeperator {
+    font-size: 80%;
+}
+
+.navGroup {
+    display: flex;
+    align-items: center;
+}
+
+.navItem {
+    font-family: "Open Sans","Helvetica Neue",sans-serif;
+    font-size: .7em;
+    font-weight: 800;
+    letter-spacing: .5px;
+    padding: 0 0 .2rem 0;
+    margin: .5rem 0 .3rem 1rem;
+}
+
+.navItem:nth-child(1) {
+    color: #bb6161;
+}
+.navItem:nth-child(2) {
+    color: #9c8334;
+}
+.navItem:nth-child(3) {
+    color: #76a298;
+}
+.navItem:nth-child(4) {
+    color: #768ba2;
+}
