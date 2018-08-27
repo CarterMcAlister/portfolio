@@ -7,11 +7,11 @@ const Footer = () => (
   <footer className={footerStyles.footer}>
     <div className={footerStyles.container}>
       <p>© 2018 Placeholder</p>
-      <Link className={footerStyles.contactButton}>Get In Touch</Link>
+      <Link to="/contact" className={footerStyles.contactButton}>Get In Touch</Link>
       <div>
-        <Link className={footerStyles.iconLink}>
+        <a className={footerStyles.iconLink} href="mailto:carter@cartermcalister.name">
           <Icon name="mail" />
-        </Link>
+        </a>
         <Link className={footerStyles.iconLink}>
           <Icon name="linkedin" />
         </Link>

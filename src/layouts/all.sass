@@ -7,6 +7,20 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 
+html, body, #___gatsby
+  height: 100%;
+
+[data-reactroot] 
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+.content
+  flex: 1 0 auto
+
+footer
+  flex-shrink: 0
+
 .content .taglist
   list-style: none
   margin-bottom: 0
