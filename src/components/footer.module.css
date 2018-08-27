@@ -1,0 +1,35 @@
+.footer {
+    background-color: #2d353e;
+    font-family: Alegreya,Georgia,serif;
+    color: #6f787c;
+    font-weight: 300;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding: 1em 0;
+}
+
+.container {
+    composes: container from "./global.module.css"; /*Inherits global container*/
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactButton {
+    color: #7e8b98;
+    font-family: "Open Sans","Helvetica Neue",sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.iconLink {
+    padding: 0px 5px;
+    color: #7e8b98;
+}
+
+.iconLink:hover, .contactButton:hover {
+    color: #fff;
+    opacity: .25;
+}

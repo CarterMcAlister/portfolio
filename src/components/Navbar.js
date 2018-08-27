@@ -1,12 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
-
-//my stuff
 import navbarStyles from "./navbar.module.css"
-import globalStyles from "./global.module.css"
 
 const Navbar = () => (
   <nav className={navbarStyles.navbar}>
@@ -15,10 +9,12 @@ const Navbar = () => (
           <figure className="image">
             <img src={""} alt="Kaldi" style={{ width: '88px' }} />
           </figure>
-          Carter McAlister 
+          {/* Carter McAlister  */}
+          Placeholder
           <span className={navbarStyles.brandTagline}>
             <span className={navbarStyles.tagLineSeperator}> / </span>
-            Full-Stack Developer
+            {/* Full-Stack Developer */}
+            placeholder
           </span>
         </Link>
       <div className={navbarStyles.navGroup}>
