@@ -1,0 +1,15 @@
+.container {
+    composes: container from "./global.module.css"; /*Inherits global container*/
+}
+
+.formContainer {
+    width: 60%;
+    padding-right: 20%;
+}
+
+.blurb {
+    width: 40%;
+    padding-left: 2em;
+    border-left: 5px solid;
+    border-image: linear-gradient(to bottom,#f57878 0,#f57878 16.66667%,#f8c31c 16.66667%,#f8c31c 33.33333%,#78d5c0 33.33333%,#78d5c0 50%,#8bb3e1 50%,#8bb3e1 66.66667%,#e891bc 66.66667%,#e891bc 83.33333%,#b494c3 83.33333%,#b494c3 100%) 1;
+}

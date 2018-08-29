@@ -1,0 +1,16 @@
+.banner {
+    width: 100%;
+    border-radius: 0 0 2em 2em;
+}
+
+.container {
+    composes: container from "./global.module.css"; /*Inherits global container*/
+}
+
+.bannerText {
+    width: 75%;
+}
+
+.secondaryImage {
+    width: 25%;
+}

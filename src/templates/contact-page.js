@@ -1,71 +1,51 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
 import ContactForm from '../components/ContactForm'
+import contactStyles from './contact-page.module.css'
+import HeroBanner from '../components/HeroBanner';
 
-export const ContactPageTemplate = ({
-  image,
-  title,
-  heading,
-  description,
-  intro,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
-}) => (
-  <section className="section section--gradient">
-    <div className="container">
-      <ContactForm email="carter@cartermcalister.name"/>
-    </div>
-  </section>
+export const ContactPageTemplate = ({ email, formTitle, banner, paragraph }) => (
+  <article>
+    <HeroBanner background={banner.background} title={banner.title} subText={banner.subText} secondaryImage={banner.image} />
+    <section className={contactStyles.container}>
+      <ContactForm email={email} title={formTitle} className={contactStyles.formContainer} />
+      <div className={contactStyles.blurb}>
+        <h2>{paragraph.title}</h2>
+        <p>{paragraph.text}</p>
+      </div>
+    </section>
+  </article>
 )
 
 ContactPageTemplate.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+  email: PropTypes.string,
+  formTitle: PropTypes.string,
+  banner: PropTypes.shape({
+    background: PropTypes.object,
+    title: PropTypes.string,
+    subText: PropTypes.string,
+    image: PropTypes.object
   }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
-  }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.string,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
+  paragraph: PropTypes.shape({
+    title: PropTypes.string,
+    text: PropTypes.string
   }),
 }
 
-const ProductPage = ({ data }) => {
+const ContactPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
     <ContactPageTemplate
-      image={frontmatter.image}
-      title={frontmatter.title}
-      heading={frontmatter.heading}
-      description={frontmatter.description}
-      intro={frontmatter.intro}
-      main={frontmatter.main}
-      testimonials={frontmatter.testimonials}
-      fullImage={frontmatter.full_image}
-      pricing={frontmatter.pricing}
+      email={frontmatter.email}
+      formTitle={frontmatter.formTitle}
+      banner={frontmatter.banner}
+      paragraph={frontmatter.paragraph}
     />
   )
 }
 
-ProductPage.propTypes = {
+ContactPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -73,54 +53,29 @@ ProductPage.propTypes = {
   }),
 }
 
-export default ProductPage
+export default ContactPage
 
 export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
-        image
-        heading
-        description
-        intro {
-          blurbs {
-            image
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
+        email
+        formTitle
+        banner {
+          title
+          subText
+          background {
             alt
             image
           }
-          image2 {
-            alt
-            image
-          }
-          image3 {
+          image {
             alt
             image
           }
         }
-        testimonials {
-          author
-          quote
-        }
-        full_image
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
+        paragraph {
+          title
+          text
         }
       }
     }

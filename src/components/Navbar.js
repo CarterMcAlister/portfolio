@@ -6,9 +6,7 @@ const Navbar = () => (
   <nav className={navbarStyles.navbar}>
     <div className={navbarStyles.navbarContainer}>
         <Link to="/" className={navbarStyles.navbarBrand} title="Carter McAlister">
-          <figure className="image">
-            <img src={""} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
+          <img src={""} alt="Kaldi" style={{ width: '88px' }} className="image"/>
           {/* Carter McAlister  */}
           Placeholder
           <span className={navbarStyles.brandTagline}>
