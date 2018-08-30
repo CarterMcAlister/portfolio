@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/pages/blog"
+    folder: "src/pages/blog/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -29,6 +29,22 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/projects/index.md"
+        label: "Projects"
+        name: "projects"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: "Form Title", name: formTitle, widget: string}
+          - {label: "Email Address", name: emailAddress, widget: string}
+          - {label: Banner, name: banner, widget: object, fields: [{label: Title, name: title, widget: string}, {label: "Secondary Text", name: subText, widget: text}, {label: "Background Image", name: background, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: "Decorative Image", name: image, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]} ]}
+          - {label: Paragraph, name: paragraph, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Text, name: text, widget: text} ]}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
