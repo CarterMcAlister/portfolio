@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Content, { HTMLContent } from '../components/Content'
 
 export const ProjectsPageTemplate = ({ title }) => (
   <section className="section section--gradient">
@@ -27,7 +26,6 @@ const ProjectsPage = ({ data }) => {
 
   return (
     <ProjectsPageTemplate
-      contentComponent={HTMLContent}
       title={post.frontmatter.title}
     />
   )
