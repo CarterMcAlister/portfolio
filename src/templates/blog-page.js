@@ -2,14 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import HeroBanner from '../components/HeroBanner';
+import blogPageStyles from './blog-page.module.css'
 
 export const BlogPageTemplate = ({ posts }) => (
     <section className="section">
-      <HeroBanner background={""} title={""} subText={""} secondaryImage={""} />
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-          </div>
+      <HeroBanner background={""} title={"Latest Posts"} subText={""} secondaryImage={""} />
+        <div className={blogPageStyles.container}>
           {posts
             .map(({ node: post }) => (
               <div
