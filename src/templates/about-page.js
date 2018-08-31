@@ -9,7 +9,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <article>
-      <HeroBanner background={""} title={title} subText={"subtext"} secondaryImage={""} />
+      <HeroBanner background={{image:"https://cartermcalister.name/img/bg.png", alt:"test"}} title={"Latest Posts"} subText={""} secondaryImage={""} />
       <section className={aboutPageStyles.container}>
         <PageContent content={content} />
       </section>

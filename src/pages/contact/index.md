@@ -8,7 +8,7 @@ banner:
   subText: Great coffee with no compromises
   background:
     alt: Placeholder
-    image: /img/products-grid3.jpg
+    image: /img/bg.png
   image:
     alt: Placeholder
     image: /img/products-grid2.jpg

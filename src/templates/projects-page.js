@@ -4,7 +4,7 @@ import HeroBanner from '../components/HeroBanner';
 
 export const ProjectsPageTemplate = ({ title }) => (
   <article>
-    <HeroBanner background={""} title={title} subText={"subtext"} secondaryImage={""} />
+    <HeroBanner background={{image:"https://cartermcalister.name/img/bg.png", alt:"test"}} title={"Projects"} subText={""} secondaryImage={""} />
     <section className={""}>
     </section>
   </article>

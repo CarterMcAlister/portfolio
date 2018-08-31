@@ -1,10 +1,13 @@
 .banner {
     width: 100%;
     border-radius: 0 0 2em 2em;
+    height: 200px;
+    margin-bottom: 30px;
 }
 
 .container {
     composes: container from "./global.module.css"; /*Inherits global container*/
+    padding-top: 51px;
 }
 
 .bannerText {
