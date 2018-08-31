@@ -1,3 +1,0 @@
-.container {
-    composes: container from "./global.module.css"; /*Inherits global container*/
-}

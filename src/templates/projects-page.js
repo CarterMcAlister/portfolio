@@ -1,12 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import HeroBanner from '../components/HeroBanner';
+import ContentTopper from '../components/ContentTopper'
+import globalStyles from './global.module.css'
 
 export const ProjectsPageTemplate = ({ title }) => (
   <article>
     <HeroBanner background={{image:"https://cartermcalister.name/img/bg.png", alt:"test"}} title={"Projects"} subText={""} secondaryImage={""} />
-    <section className={""}>
-    </section>
+    <section className={globalStyles.pageContent}>
+        <ContentTopper />
+        <div className={globalStyles.contentWrapper}>
+          <div className={globalStyles.container}>
+          {/* content here */}
+          </div>
+        </div>
+      </section>
   </article>
 )
 

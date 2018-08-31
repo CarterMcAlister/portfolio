@@ -3,17 +3,26 @@ import PropTypes from 'prop-types'
 import ContactForm from '../components/ContactForm'
 import contactStyles from './contact-page.module.css'
 import HeroBanner from '../components/HeroBanner';
+import ContentTopper from '../components/ContentTopper'
+import globalStyles from './global.module.css'
 
 export const ContactPageTemplate = ({ email, formTitle, banner, paragraph }) => (
   <article>
     <HeroBanner background={banner.background} title={banner.title} subText={banner.subText} secondaryImage={banner.image} />
-    <section className={contactStyles.container}>
-      <ContactForm email={email} title={formTitle} className={contactStyles.formContainer} />
-      <div className={contactStyles.blurb}>
-        <h2>{paragraph.title}</h2>
-        <p>{paragraph.text}</p>
-      </div>
-    </section>
+    <section className={globalStyles.pageContent}>
+        <ContentTopper />
+        <div className={globalStyles.contentWrapper}>
+          <div className={globalStyles.container}>
+            
+            <ContactForm email={email} title={formTitle} className={contactStyles.formContainer} />
+            <div className={contactStyles.blurb}>
+              <h2>{paragraph.title}</h2>
+              <p>{paragraph.text}</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
   </article>
 )
 

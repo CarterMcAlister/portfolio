@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
-import HeroBanner from '../components/HeroBanner';
-import aboutPageStyles from './about-page.module.css'
+import HeroBanner from '../components/HeroBanner'
+import ContentTopper from '../components/ContentTopper'
+import globalStyles from './global.module.css'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -10,8 +11,13 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <article>
       <HeroBanner background={{image:"https://cartermcalister.name/img/bg.png", alt:"test"}} title={"Latest Posts"} subText={""} secondaryImage={""} />
-      <section className={aboutPageStyles.container}>
-        <PageContent content={content} />
+      <section className={globalStyles.pageContent}>
+        <ContentTopper />
+        <div className={globalStyles.contentWrapper}>
+          <div className={globalStyles.container}>
+            <PageContent content={content} />
+          </div>
+        </div>
       </section>
     </article>
   )

@@ -1,8 +1,7 @@
 .banner {
     width: 100%;
-    border-radius: 0 0 2em 2em;
     height: 200px;
-    margin-bottom: 30px;
+    position: fixed;
 }
 
 .container {

@@ -37,7 +37,14 @@
     
 }
 
+.contentWrapper {
+    background-color: #FFF;
+    padding-top: 30px;
+}
 
-
-
-
+.pageContent {
+    z-index: 2;
+    top: 168px;
+    margin-bottom: 168px;
+    position: relative;
+}
