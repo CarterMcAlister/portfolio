@@ -10,7 +10,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <article>
-      <HeroBanner background={{image:"https://cartermcalister.name/img/bg.png", alt:"test"}} title={"Latest Posts"} subText={""} secondaryImage={""} />
+      <HeroBanner background={{image:"https://cartermcalister.name/img/bg.png", alt:"test"}} title={title} subText={""} secondaryImage={""} />
       <section className={globalStyles.pageContent}>
         <ContentTopper />
         <div className={globalStyles.contentWrapper}>
