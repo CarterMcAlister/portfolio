@@ -6,7 +6,7 @@ import footerStyles from "./footer.module.css"
 const Footer = () => (
   <footer className={footerStyles.footer}>
     <div className={footerStyles.container}>
-      <p>© 2018 Placeholder</p>
+      <p>© 2018 Carter McAlister</p>
       <Link to="/contact" className={footerStyles.contactButton}>Get In Touch</Link>
       <div>
         <a className={footerStyles.iconLink} href="mailto:carter@cartermcalister.name">
