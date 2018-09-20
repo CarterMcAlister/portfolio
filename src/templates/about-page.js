@@ -4,6 +4,8 @@ import Content, { HTMLContent } from '../components/Content'
 import HeroBanner from '../components/HeroBanner'
 import ContentTopper from '../components/ContentTopper'
 import globalStyles from './global.module.css'
+import logo from '../img/github-icon.svg'
+import SkillSection from '../components/SkillSection'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -14,8 +16,12 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       <section className={globalStyles.pageContent}>
         <ContentTopper />
         <div className={globalStyles.contentWrapper}>
-          <div className={globalStyles.container}>
-            <PageContent content={content} />
+          <div className={globalStyles.container} style={{flexDirection:'column'}}>
+            <SkillSection  heading="HTML" skillList={[{icon:'../img/skill-icons/html.svg', title:"First"}, {icon:{logo}, title:"Second"}, {icon:{logo}, title:"Third"}, {icon:{logo}, title:"Fourth"}]}/>
+            <SkillSection  heading="CSS" skillList={[{icon:'../img/skill-icons/html.svg', title:"First"}, {icon:{logo}, title:"Second"}, {icon:{logo}, title:"Third"}, {icon:{logo}, title:"Fourth"}]}/>
+            <SkillSection  heading="Javascript" skillList={[{icon:'../img/skill-icons/html.svg', title:"First"}, {icon:{logo}, title:"Second"}, {icon:{logo}, title:"Third"}, {icon:{logo}, title:"Fourth"}]}/>
+            <SkillSection  heading="Back-End" skillList={[{icon:'../img/skill-icons/html.svg', title:"First"}, {icon:{logo}, title:"Second"}, {icon:{logo}, title:"Third"}, {icon:{logo}, title:"Fourth"}]}/>
+            <SkillSection  heading="Tools" skillList={[{icon:'../img/skill-icons/html.svg', title:"First"}, {icon:{logo}, title:"Second"}, {icon:{logo}, title:"Third"}, {icon:{logo}, title:"Fourth"}]}/>
           </div>
         </div>
       </section>

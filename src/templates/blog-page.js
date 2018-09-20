@@ -15,7 +15,7 @@ export const BlogPageTemplate = ({ posts }) => (
         <div className={globalStyles.contentWrapper}>
           <div className={blogPageStyles.container}>
 
-            <ul>
+            <ul className={blogPageStyles.list}>
               {posts
               .map(({ node: post }) => (
                 <li className={blogPageStyles.listItem} key={post.id}>
