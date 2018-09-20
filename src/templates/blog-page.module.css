@@ -2,3 +2,37 @@
     composes: container from "./global.module.css"; /*Inherits global container*/
     flex-direction: column;
 }
+
+.listItem {
+    background: #FFF;
+    box-shadow: rgba(25, 17, 34, 0.1) 0px 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    width: 100%;
+    border: 1px solid #eaecee; 
+    padding: 2em 3em;
+    cursor: pointer;
+}
+
+.itemLink {
+    display: block;
+    display: flex;
+
+}
+
+.itemTitle {
+    color: rgba(0,0,0,.8);
+    font-size: 1.5em;
+    padding-bottom: 0.4em;
+}
+
+.itemImage {
+    width: 20%;
+    margin-right: 2em;
+}
+
+.itemText {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: rgba(0,0,0,.75); 
+}

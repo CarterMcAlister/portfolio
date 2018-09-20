@@ -5,6 +5,7 @@ import HeroBanner from '../components/HeroBanner';
 import blogPageStyles from './blog-page.module.css'
 import globalStyles from './global.module.css'
 import ContentTopper from '../components/ContentTopper'
+import placeholder from '../img/skill-icons/html.svg'
 
 export const BlogPageTemplate = ({ posts }) => (
     <article>
@@ -13,30 +14,27 @@ export const BlogPageTemplate = ({ posts }) => (
         <ContentTopper />
         <div className={globalStyles.contentWrapper}>
           <div className={blogPageStyles.container}>
-            {posts
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
+
+            <ul>
+              {posts
+              .map(({ node: post }) => (
+                <li className={blogPageStyles.listItem} key={post.id}>
+                  <Link className={blogPageStyles.itemLink} to={post.fields.slug}>
+                  <img src={placeholder} className={blogPageStyles.itemImage} />
+                  <div>
+                  
+                    <h3 className={blogPageStyles.itemTitle}>{post.frontmatter.title}</h3>
+                  
+                  <p className={blogPageStyles.itemText}>
+                    {post.excerpt}
+                    <br />
+                  </p>
+                  </div>
                   </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))}
+                </li>
+              ))}
+            </ul>
+
           </div>
         </div>
       </section>
